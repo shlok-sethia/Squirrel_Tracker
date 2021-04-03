@@ -34,3 +34,8 @@ class Squirrel(models.Model):
     RunsFrom = models.BooleanField('RunsFrom')
     OtherInteractions = models.CharField('OtherInteractions', max_length=255)
     LatLong = models.CharField('Latlong', max_length=255)
+
+    def __str__(self):
+        return f'Suirrel ID: {self.UniqueSquirrelID}'
+
+
