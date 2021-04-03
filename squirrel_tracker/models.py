@@ -1,3 +1,40 @@
 from django.db import models
 
 # Create your models here.
+
+class Squirrel(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date = models.DateTimeField('date published')
+
+    X = models.FloatField('X')
+    Y = models.FloatField('Y')
+
+    UniqueSquirrelID = models.CharField(primary_key=True)
+    Hectare = models.CharField('Hectare')
+    Shift = models.CharField('Shift')
+    Date = models.DateField('Date')
+    HectareSquirrelNumber = models.IntegerField('HectareSquirrelNumber')
+    Age = models.CharField('Age')
+    PrimaryFurColor = models.CharField('PrimaryFurColor')
+    HighlightFurColor = models.CharField('HighlightFurColor')
+    CombinationOfPrimaryAndHighlightColor = models.CharField('CombinationOfPrimaryAndHighlightColor')
+    ColorNotes = models.CharField('ColorNotes')
+    Location = models.CharField('Location')
+    AboveGroundSighterMeasurement = models.CharField('AboveGroundSighterMeasurement')
+    SpecificLocation = models.CharField('SpecificLocation')
+    Running = models.BooleanField('Running')
+    Chasing = models.BooleanField('Chasing')
+    Climbing = models.BooleanField('Climbing')
+    Eating = models.BooleanField('Eating')
+    Foraging = models.BooleanField('Foraging')
+    OtherActivities = models.CharField('OtherActivities')
+    Kuks = models.BooleanField('Kuks')
+    Quaas = models.BooleanField('Quaas')
+    Moans = models.BooleanField('Moans')
+    TailFlags = models.BooleanField('TailFlags')
+    TailTwitches = models.BooleanField('TailTwitches')
+    Approaches = models.BooleanField('Approaches')
+    Indifferent = models.BooleanField('Indifferent')
+    RunsFrom = models.BooleanField('RunsFrom')
+    OtherInteractions = models.CharField('OtherInteractions')
+    LatLong = models.CharField('Latlong')
