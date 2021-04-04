@@ -13,3 +13,13 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         parser.add_argument('filename', type=str, help='filename for csv file')
+
+    def handle(self, *args, **kwargs):
+        filename = kwargs['filename']
+        columns = Squirrel._meta.fields
+        with open(filename, 'w') as f:
+            writer = csv.writer(f)
+            for i in Squirrel.objects.all():
+                row = [getattr(i, col.name) for col in columns]
+                writer.writerow(row)
+            f.close()
