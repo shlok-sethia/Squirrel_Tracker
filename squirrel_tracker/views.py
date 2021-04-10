@@ -17,3 +17,6 @@ def update_location(request, squirrel_id):
 
 def add_sighting(request):
     return render(request, 'squirrel_tracker/add.html', {})
+
+def get_stats(request):
+    return render(request, 'squirrel_tracker/stats.html', {})

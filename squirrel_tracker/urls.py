@@ -7,5 +7,6 @@ urlpatterns = [
     path('map/', views.map, name='map'),
     path('sightings/', views.sightings, name='sightings'),
     path('sightings/<squirrel_id>', views.update_location, name='update'),
-    path('sightings/add', views.add_sighting(), name='add')
+    path('sightings/add', views.add_sighting(), name='add'),
+    path('sightings/stats', views.get_stats(), name='stats')
 ]
