@@ -11,3 +11,6 @@ def map(request):
 
 def sightings(request):
     return render(request, 'squirrel_tracker/sightings.html', {})
+
+def update_location(request, squirrel_id):
+    return render(request, 'squirrel_tracker/update.html', {})
