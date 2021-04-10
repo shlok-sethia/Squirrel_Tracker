@@ -14,3 +14,6 @@ def sightings(request):
 
 def update_location(request, squirrel_id):
     return render(request, 'squirrel_tracker/update.html', {})
+
+def add_sighting(request):
+    return render(request, 'squirrel_tracker/add.html', {})
