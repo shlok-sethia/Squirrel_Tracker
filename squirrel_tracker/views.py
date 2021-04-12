@@ -11,7 +11,8 @@ def map(request):
     return render(request, 'squirrel_tracker/map.html', {'squ': squirrel_data})
 
 def sightings(request):
-    return render(request, 'squirrel_tracker/sightings.html', {})
+    squirrel_data = Squirrel.objects.all()[:100]
+    return render(request, 'squirrel_tracker/sightings.html', {'squ': squirrel_data})
 
 def update_squirrel(request, squirrel_id):
     squirrel_data = Squirrel.objects.get(UniqueSquirrelID=squirrel_id)
