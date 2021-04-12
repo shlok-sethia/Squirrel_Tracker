@@ -2,9 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Squirrel Data</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+        }
+
+        h1 { color: #000000;
+            font-size: 100px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            line-height: 1;
+            text-align: center;
+        }
+
+
+        .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+            font-size: 30px;
+        }
+
+        .button {
+            background-color: #1abc9c;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #sightings {
+            border-collapse: collapse;
+            width: 90%
+        }
+
+        #sightings td, #sightings th {
+            border: 1px solid #000;
+            padding:8px;
+        }
+
+        #sightings tr:nth-child(even){background-color: #f2f2f2;}
+
+        #sightings tr:hover {background-color: #ddd;}
+
+        #sightings th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #1abc9c;
+            color: white;
+        }
+
+    </style>
     <title>Title</title>
 </head>
 <body>
+    <header class='header'>
+        <h1>Squirrel Sightings</h1>
+        <img src="squirrel1.jpg" alt="Sightings_Squirrel" width="460" height="345">
+    </header>
+
+    <main>
+
+        <p style="text-align:center">
+            <a href="add/", class="button">Add squirrel</a>
+        </p>
+
+        <table id='sightings'>
+            <tr>
+                <th>UniqueSquirrelID</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>Hectare</th>
+                <th>Shift</th>
+                <th>Date</th>
+                <th>HectareSquirrelNumber</th>
+                <th>Age</th>
+                <th>PrimaryFurColor</th>
+                <th>HighlightFurColor</th>
+                <th>CombinationOfPrimaryAndHighlightColor</th>
+                <th>ColorNotes</th>
+                <th>Location</th>
+                <th>AboveGroundSighterMeasurement</th>
+                <th>SpecificLocation</th>
+                <th>Running</th>
+                <th>Chasing</th>
+                <th>Climbing</th>
+                <th>Eating</th>
+                <th>Foraging</th>
+                <th>OtherActivities</th>
+                <th>Kuks</th>
+                <th>Quaas</th>
+                <th>Moans</th>
+                <th>TailFlags</th>
+                <th>TailTwiches</th>
+                <th>Approaches</th>
+                <th>Indifferent</th>
+                <th>Runs_From</th>
+                <th>OtherInteraction</th>
+                <th>LatLong</th>
+            </tr>
+            {% for rows in squ %}
+            <tr>
+                <td><a href="{{rows.UniqueSquirrelID}}">{{rows.UniqueSquirrelID}}</a></td>
+                <td>{{rows.Latitude}}</td>
+                <td>{{rows.Longitude}}</td>
+                <td>{{rows.Hectare}}</td>
+                <td>{{rows.Shift}}</td>
+                <td>{{rows.Date}}</td>
+                <td>{{rows.HectareSquirrelNumber}}</td>
+                <td>{{rows.Age}}</td>
+                <td>{{rows.PrimaryFurColor}}</td>
+                <td>{{rows.HighlightFurColor}}</td>
+                <td>{{rows.CombinationOfPrimaryAndHighlightColor}}</td>
+                <td>{{rows.ColorNotes}}</td>
+                <td>{{rows.Location}}</td>
+                <td>{{rows.AboveGroundSighterMeasurement}}</td>
+                <td>{{rows.SpecificLocation}}</td>
+                <td>{{rows.Running}}</td>
+                <td>{{rows.Chasing}}</td>
+                <td>{{rows.Climbing}}</td>
+                <td>{{rows.Eating}}</td>
+                <td>{{rows.Foraging}}</td>
+                <td>{{rows.OtherActivities}}</td>
+                <td>{{rows.Kuks}}</td>
+                <td>{{rows.Quaas}}</td>
+                <td>{{rows.Moans}}</td>
+                <td>{{rows.TailFlags}}</td>
+                <td>{{rows.TailTwiches}}</td>
+                <td>{{rows.Approaches}}</td>
+                <td>{{rows.Indifferent}}</td>
+                <td>{{rows.RunsFrom}}</td>
+                <td>{{rows.OtherInteraction}}</td>
+                <td>{{rows.LatLong}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+
 
 </body>
 </html>
