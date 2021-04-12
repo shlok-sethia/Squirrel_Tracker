@@ -3,8 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <title>Update</title>
+    <style>
+        div{
+            display: inline-block;
+            padding: 5px;
+        }
+        form{
+            display:grid;
+        }
+    </style>
 </head>
 <body>
-
+    <form method="post">
+        <div>
+            <label for="id_Latitude">X:</label>
+            <input type="number" name="Latitude" value="{{form_data.Latitude}}" step="any" required="" id="id_Latitude">
+        </div>
+        <div>
+            <label for="id_Longitude">Y:</label>
+            <input type="number" name="Longitude" value="{{form_data.Longitude}}" step="any" required="" id="id_Longitude">
+        </div>
+        <div>
+            <label for="id_UniqueSquirrelID">UniqueSquirrelID:</label>
+            <input type="text" name="UniqueSquirrelID" value="{{form_data.UniqueSquirrelID}}" maxlength="255" required="" id="id_UniqueSquirrelID">
+        </div>
+        <div>
+            <label for="id_Hectare">Hectare:</label>
+            <input type="text" name="Hectare" value="{{form_data.Hectare}}" maxlength="255" id="id_Hectare">
+        </div>
+        <div>
+            <label for="id_Shift">Shift:</label>
+            <input type="text" name="Shift" value="{{form_data.Shift}}" maxlength="255" id="id_Shift">
+        </div>
+        <div>
+            <label for="id_Date">Date:</label>
+            <input type="text" name="Date" value="{{form_data.Date}}" maxlength="255" id="id_Date">
+        </div>
+        <div>
+            <label for="id_HectareSquirrelNumber">HectareSquirrelNumber:</label>
+            <input type="number" name="HectareSquirrelNumber" value="{{form_data.HectareSquirrelNumber}}" id="id_HectareSquirrelNumber">
+        </div>
+        <div>
+            <label for="id_Age">Age:</label>
+            <input type="text" name="Age" value="{{form_data.Age}}" maxlength="255" id="id_Age">
+        </div>
+        <div>
+            <label for="id_PrimaryFurColor">PrimaryFurColor:</label>
+            <input type="text" name="PrimaryFurColor" value="{{form_data.PrimaryFurColor}}" maxlength="255" id="id_PrimaryFurColor">
+        </div>
+        <div>
+            <label for="id_HighlightFurColor">HighlightFurColor:</label>
+            <input type="text" name="HighlightFurColor" value="{{form_data.HighlightFurColor}}" maxlength="255" id="id_HighlightFurColor">
+        </div>
+        <div>
+            <label for="id_CombinationOfPrimaryAndHighlightColor">CombinationOfPrimaryAndHighlightColor:</label>
+            <input type="text" name="CombinationOfPrimaryAndHighlightColor" value="+" maxlength="255" id="id_CombinationOfPrimaryAndHighlightColor">
+        </div>
+        <div>
+            <label for="id_ColorNotes">ColorNotes:</label>
+            <input type="text" name="ColorNotes" value="{{form_data.ColorNotes}}" maxlength="255" id="id_ColorNotes">
+        </div>
+        <div>
+            <label for="id_Location">Location:</label>
+            <input type="text" name="Location" value="{{form_data.Location}}" maxlength="255" id="id_Location">
+        </div>
+        <div>
+            <label for="id_AboveGroundSighterMeasurement">AboveGroundSighterMeasurement:</label>
+            <input type="text" name="AboveGroundSighterMeasurement" value="{{form_data.AboveGroundSighterMeasurement}}" maxlength="255" id="id_AboveGroundSighterMeasurement">
+        </div>
+        <div>
+            <label for="id_SpecificLocation">SpecificLocation:</label>
+            <input type="text" name="SpecificLocation" value="{{form_data.SpecificLocation}}" maxlength="255" id="id_SpecificLocation">
+        </div>
+        <div>
+            <label for="id_Running">Running:</label>
+            <input type="checkbox" name="Running" id="id_Running">
+        </div>
+        <div>
+            <label for="id_Chasing">Chasing:</label>
+            <input type="checkbox" name="Chasing" id="id_Chasing">
+        </div>
+        <div>
+            <label for="id_Climbing">Climbing:</label>
+            <input type="checkbox" name="Climbing" id="id_Climbing">
+        </div>
+        <div>
+            <label for="id_Eating">Eating:</label>
+            <input type="checkbox" name="Eating" id="id_Eating">
+        </div>
+        <div>
+            <label for="id_Foraging">Foraging:</label>
+            <input type="checkbox" name="Foraging" id="id_Foraging">
+        </div>
+        <div>
+            <label for="id_OtherActivities">OtherActivities:</label>
+            <input type="text" name="OtherActivities" value="False" maxlength="255" id="id_OtherActivities">
+        </div>
+        <div>
+            <label for="id_Kuks">Kuks:</label>
+            <input type="checkbox" name="Kuks" id="id_Kuks">
+        </div>
+        <div>
+            <label for="id_Quaas">Quaas:</label>
+            <input type="checkbox" name="Quaas" id="id_Quaas">
+        </div>
+        <div>
+            <label for="id_Moans">Moans:</label>
+            <input type="checkbox" name="Moans" id="id_Moans">
+        </div>
+        <div>
+            <label for="id_TailFlags">TailFlags:</label>
+            <input type="checkbox" name="TailFlags" id="id_TailFlags">
+        </div>
+        <div>
+            <label for="id_TailTwitches">TailTwitches:</label>
+            <input type="checkbox" name="TailTwitches" id="id_TailTwitches">
+        </div>
+        <div>
+            <label for="id_Approaches">Approaches:</label>
+            <input type="checkbox" name="Approaches" id="id_Approaches">
+        </div>
+        <div>
+            <label for="id_Indifferent">Indifferent:</label>
+            <input type="checkbox" name="Indifferent" id="id_Indifferent">
+        </div>
+        <div>
+            <label for="id_RunsFrom">RunsFrom:</label>
+            <input type="checkbox" name="RunsFrom" id="id_RunsFrom">
+        </div>
+        <div>
+            <label for="id_OtherInteractions">OtherInteractions:</label>
+            <input type="text" name="OtherInteractions" value="{{form_data.OtherInteractions}}" maxlength="255" id="id_OtherInteractions">
+        </div>
+        <div>
+            <label for="id_LatLong">Latlong:</label>
+            <input type="text" name="LatLong" value="{{form_data.LatLong}}" maxlength="255" id="id_LatLong">
+        </div>
+        <br>
+        <input type="submit" name="Submit">
+    </form>
 </body>
 </html>

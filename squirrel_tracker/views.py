@@ -14,8 +14,9 @@ def sightings(request):
 
 def update_squirrel(request, squirrel_id):
     squirrel_data = Squirrel.objects.get(UniqueSquirrelID=squirrel_id)
-    form_data = SquirrelForm(instance=squirrel_data)
-    return render(request, 'squirrel_tracker/update.html', {'form_data': form_data})
+    print(squirrel_data.Latitude)
+    #form_data = SquirrelForm(instance=squirrel_data)
+    return render(request, 'squirrel_tracker/update.html', {'form_data': squirrel_data})
 
 def add_sighting(request):
     return render(request, 'squirrel_tracker/add.html', {})
