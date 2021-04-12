@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from squirrel_tracker.models import Squirrel
 from squirrel_tracker.forms import SquirrelForm
+from squirrel_tracker.forms import AddSquirrelForm
 
 
 def index(request):
@@ -28,7 +29,7 @@ def update_squirrel(request, squirrel_id):
 
 def add_sighting(request):
     print("********")
-    form_data = SquirrelForm()
+    form_data = AddSquirrelForm()
     return render(request, 'squirrel_tracker/add.html', {"form_data": form_data})
 
 def get_stats(request):

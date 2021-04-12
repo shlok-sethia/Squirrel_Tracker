@@ -5,3 +5,8 @@ class SquirrelForm(ModelForm):
 	class Meta:
 		model = Squirrel
 		fields = ['Latitude', 'Longitude', 'UniqueSquirrelID', 'Shift', 'Date', 'Age']
+
+class AddSquirrelForm(ModelForm):
+	class Meta:
+		model = Squirrel
+		fields = '__all__'
