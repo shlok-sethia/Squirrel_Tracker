@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 
 from . import views
 
@@ -6,7 +6,7 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('map/', views.map, name='map'),
     path('sightings/', views.sightings, name='sightings'),
-    path('sightings/<str:squirrel_id>', views.update_squirrel, name='update'),
+    re_path('sightings/([\w]*-[\w]*-[\w]*-[\w]*)', views.update_squirrel, name='update'),
     path('sightings/add', views.add_sighting, name='add'),
     path('sightings/stats', views.get_stats, name='stats')
 ]

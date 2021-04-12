@@ -27,7 +27,9 @@ def update_squirrel(request, squirrel_id):
     return render(request, 'squirrel_tracker/update.html', {'form_data': form_data})
 
 def add_sighting(request):
-    return render(request, 'squirrel_tracker/add.html', {})
+    print("********")
+    form_data = SquirrelForm()
+    return render(request, 'squirrel_tracker/add.html', {"form_data": form_data})
 
 def get_stats(request):
     return render(request, 'squirrel_tracker/stats.html', {})
