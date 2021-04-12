@@ -28,8 +28,12 @@ def update_squirrel(request, squirrel_id):
     return render(request, 'squirrel_tracker/update.html', {'form_data': form_data})
 
 def add_sighting(request):
-    print("********")
-    form_data = AddSquirrelForm()
+    if request.method == 'POST':
+        form_data = AddSquirrelForm(request.POST)
+        if form_data.is_valid():
+            form_data.save()
+    else:
+        form_data = AddSquirrelForm()
     return render(request, 'squirrel_tracker/add.html', {"form_data": form_data})
 
 def get_stats(request):
