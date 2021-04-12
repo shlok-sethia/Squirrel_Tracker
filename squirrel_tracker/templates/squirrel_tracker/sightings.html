@@ -38,10 +38,15 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+        #table-scroll {
+            height:150px;
+            overflow-x:auto;
+            margin-top:20px;
+        }
 
         #sightings {
             border-collapse: collapse;
-            width: 90%
+            width: 90%;
         }
 
         #sightings td, #sightings th {
@@ -75,7 +80,7 @@
         <p style="text-align:center">
             <a href="add", class="button">Add squirrel</a>
         </p>
-
+        <div id="table-scroll">
         <table id='sightings'>
             <tr>
                 <th>UniqueSquirrelID</th>
@@ -146,6 +151,7 @@
             </tr>
             {% endfor %}
         </table>
+        </div>
     </main>
 
 
