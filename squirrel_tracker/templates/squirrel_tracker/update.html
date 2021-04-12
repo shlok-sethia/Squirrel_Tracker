@@ -4,6 +4,40 @@
     <meta charset="UTF-8">
     <title>Update</title>
     <style>
+    body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+        }
+
+        h1 { color: #000000;
+            font-size: 100px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            line-height: 1;
+            text-align: center;
+        }
+
+
+        .header {
+            padding: 60px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+            font-size: 30px;
+        }
+
+        .button {
+            background-color: #1abc9c;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
         div{
             display: inline-block;
             padding: 5px;
@@ -17,11 +51,15 @@
     </style>
 </head>
 <body>
-    <h1>Update Squirrel Data</h1>
-    <form method="post">{% csrf_token %}
+    <header class='header'>
+        <h1>Update Squirrel Data</h1>
+    </header>
+        <form method="post">{% csrf_token %}
         {{form_data.as_p}}
         <br>
-        <input type="submit" name="Submit" class="submit">
+            <p style="text-align:center">
+            <input type="submit" name="Submit" class="button">
+            </p>
     </form>
 </body>
 </html>
