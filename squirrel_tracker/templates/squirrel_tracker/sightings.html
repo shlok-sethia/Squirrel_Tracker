@@ -84,70 +84,12 @@
         <table id='sightings'>
             <tr>
                 <th>UniqueSquirrelID</th>
-                <th>Latitude</th>
-                <th>Longitude</th>
-                <th>Hectare</th>
-                <th>Shift</th>
                 <th>Date</th>
-                <th>HectareSquirrelNumber</th>
-                <th>Age</th>
-                <th>PrimaryFurColor</th>
-                <th>HighlightFurColor</th>
-                <th>CombinationOfPrimaryAndHighlightColor</th>
-                <th>ColorNotes</th>
-                <th>Location</th>
-                <th>AboveGroundSighterMeasurement</th>
-                <th>SpecificLocation</th>
-                <th>Running</th>
-                <th>Chasing</th>
-                <th>Climbing</th>
-                <th>Eating</th>
-                <th>Foraging</th>
-                <th>OtherActivities</th>
-                <th>Kuks</th>
-                <th>Quaas</th>
-                <th>Moans</th>
-                <th>TailFlags</th>
-                <th>TailTwiches</th>
-                <th>Approaches</th>
-                <th>Indifferent</th>
-                <th>Runs_From</th>
-                <th>OtherInteraction</th>
-                <th>LatLong</th>
             </tr>
             {% for rows in squ %}
             <tr>
                 <td><a href="{{rows.UniqueSquirrelID}}">{{rows.UniqueSquirrelID}}</a></td>
-                <td>{{rows.Latitude}}</td>
-                <td>{{rows.Longitude}}</td>
-                <td>{{rows.Hectare}}</td>
-                <td>{{rows.Shift}}</td>
                 <td>{{rows.Date}}</td>
-                <td>{{rows.HectareSquirrelNumber}}</td>
-                <td>{{rows.Age}}</td>
-                <td>{{rows.PrimaryFurColor}}</td>
-                <td>{{rows.HighlightFurColor}}</td>
-                <td>{{rows.CombinationOfPrimaryAndHighlightColor}}</td>
-                <td>{{rows.ColorNotes}}</td>
-                <td>{{rows.Location}}</td>
-                <td>{{rows.AboveGroundSighterMeasurement}}</td>
-                <td>{{rows.SpecificLocation}}</td>
-                <td>{{rows.Running}}</td>
-                <td>{{rows.Chasing}}</td>
-                <td>{{rows.Climbing}}</td>
-                <td>{{rows.Eating}}</td>
-                <td>{{rows.Foraging}}</td>
-                <td>{{rows.OtherActivities}}</td>
-                <td>{{rows.Kuks}}</td>
-                <td>{{rows.Quaas}}</td>
-                <td>{{rows.Moans}}</td>
-                <td>{{rows.TailFlags}}</td>
-                <td>{{rows.TailTwiches}}</td>
-                <td>{{rows.Approaches}}</td>
-                <td>{{rows.Indifferent}}</td>
-                <td>{{rows.RunsFrom}}</td>
-                <td>{{rows.OtherInteraction}}</td>
-                <td>{{rows.LatLong}}</td>
             </tr>
             {% endfor %}
         </table>
