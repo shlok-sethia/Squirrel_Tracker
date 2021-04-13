@@ -26,6 +26,9 @@
         div{
             display:flex;
         }
+        table{
+            width:auto;
+        }
         #stats {
             border-collapse: collapse;
             width: 90%
@@ -55,7 +58,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Redsquirrel_eating_2012.jpg" width="360" height="245">
     </header>
     <div>
-        <table class="stats">
+        <table class="table">
             <tr>
                 <th>Primary Fur Color</th>
                 <th>Count</th>
@@ -67,9 +70,10 @@
             </tr>
             {% endfor %}
         </table>
+        <p>Distribution of Squirrels by Fur Color</p>
     </div>
     <div>
-        <table class="stats">
+        <table class="table">
             <tr>
                 <th>Activities</th>
                 <th>Count</th>
@@ -81,6 +85,7 @@
             </tr>
             {% endfor %}
         </table>
+        <p>Count of Squirrels for Different Activities</p>
     </div>
 </body>
 </html>
