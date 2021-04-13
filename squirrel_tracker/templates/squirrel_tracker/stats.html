@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <title>Stats</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        table{
+        width:auto !important;
+        margin: 22px 22px 22px 22px;
+        }
+        div{
+        display:flex;
+        }
+    </style>
 </head>
 <body>
-    <table class="table">
-        <tr>
-            <th>Primary Fur Color</th>
-            <th>Count</th>
-        </tr>
-        {% for key,value in fur_color.items %}
-        <tr>
-            <th>{{key}}</th>
-            <th>{{value}}</th>
-        </tr>
-        {% endfor %}
-    </table>
-    <table class="table">
-        <tr>
-            <th>Activities</th>
-            <th>Count</th>
-        </tr>
-        {% for key,value in activities.items %}
-        <tr>
-            <th>{{key}}</th>
-            <th>{{value}}</th>
-        </tr>
-        {% endfor %}
-    </table>
+    <div>
+        <table class="table table-striped">
+            <tr>
+                <th>Primary Fur Color</th>
+                <th>Count</th>
+            </tr>
+            {% for key,value in fur_color.items %}
+            <tr>
+                <th>{{key}}</th>
+                <th>{{value}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+        <table class="table table-striped">
+            <tr>
+                <th>Activities</th>
+                <th>Count</th>
+            </tr>
+            {% for key,value in activities.items %}
+            <tr>
+                <th>{{key}}</th>
+                <th>{{value}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
 </body>
 </html>
