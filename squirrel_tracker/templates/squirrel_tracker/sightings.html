@@ -11,7 +11,7 @@
         }
 
         h1 { color: #000000;
-            font-size: 75px;
+            font-size: 50px;
             font-weight: bold;
             letter-spacing: -1px;
             line-height: 1;
@@ -27,7 +27,7 @@
         .header {
             padding: 15px;
             text-align: center;
-            background: #1abc9c;
+            background: #ffae42;
             color: white;
             font-size: 30px;
         }
@@ -47,12 +47,14 @@
 
         #sightings {
             border-collapse: collapse;
-            width: 90%
+            width: 60%;
+            text-align: center;
         }
 
         #sightings td, #sightings th {
-            border: 1px solid #000;
-            padding:8px;
+            border-style: solid;
+            border-color: #ffae42;
+            padding:3px;
         }
 
         #sightings tr:nth-child(even){background-color: #f2f2f2;}
@@ -62,9 +64,24 @@
         #sightings th {
             padding-top: 12px;
             padding-bottom: 12px;
-            text-align: left;
-            background-color: #1abc9c;
+            text-align: center;
+            background-color: black;
             color: white;
+        }
+        a:link, a:visited {
+            background-color: white;
+            color: black;
+            border-style: solid;
+            border-color: #ffae42;
+            padding: 10px ;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: #ffae42;
+            color: black;
         }
 
     </style>
@@ -72,14 +89,17 @@
 </head>
 <body>
     <header class='header'>
-        <h1>Squirrel Sightings</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Squirrel%2C_Manyara_National_Park%2C_Tanzania_%282010%29.jpg" alt="Sightings_Squirrel" width="360" height="245">
+        <h1>Squirrel Here! Squirrel There! Squirrel Everywhere!</h1>
     </header>
-
+    <br>
+    <div align='center'>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/European_Red_squirrel.jpg" alt="Sightings_Squirrel" width="460" height="345" class="rounded">
+    </div>
+    <br>
     <main>
+         <p style="text-align:center">
+             <a href="add"  class="rounded" role="button" aria-pressed="true"><strong>Add squirrel</strong></a>&nbsp;&nbsp;&nbsp;&nbsp;<strong>What? You saw another Squirrel? Outrageous! Please report it by clicking the button.</strong>
 
-        <p style="text-align:center">
-            <a href="add", class="button">Add squirrel</a>
         </p>
         <div id="table-scroll">
         <table id='sightings'>
@@ -89,7 +109,7 @@
             </tr>
             {% for rows in squ %}
             <tr>
-                <td><a href="{{rows.UniqueSquirrelID}}">{{rows.UniqueSquirrelID}}</a></td>
+                <td><a href="{{rows.UniqueSquirrelID}}" class="rounded" role="button" aria-pressed="true">{{rows.UniqueSquirrelID}}</a></td>
                 <td>{{rows.Date}}</td>
             </tr>
             {% endfor %}
@@ -100,3 +120,4 @@
 
 </body>
 </html>
+
