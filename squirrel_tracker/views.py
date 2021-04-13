@@ -37,4 +37,13 @@ def add_sighting(request):
     return render(request, 'squirrel_tracker/add.html', {"form_data": form_data})
 
 def get_stats(request):
+    color_count = dict()
+    color_count['Empty']=0
+    primary_fur_colors = Squirrel.objects.values('PrimaryFurColor').distinct()
+    for color in primary_fur_colors:
+        if color['PrimaryFurColor'] == '' or color['PrimaryFurColor'] is None:
+            color_count['Empty'] += len(Squirrel.objects.filter(PrimaryFurColor=color['PrimaryFurColor']))
+        else:
+            color_count[color['PrimaryFurColor']]=len(Squirrel.objects.filter(PrimaryFurColor=color['PrimaryFurColor']))
+    print(color_count)
     return render(request, 'squirrel_tracker/stats.html', {})
