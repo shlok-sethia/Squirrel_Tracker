@@ -5,6 +5,29 @@
     <title>Stats</title>
 </head>
 <body>
-
+    <table class="table">
+        <tr>
+            <th>Primary Fur Color</th>
+            <th>Count</th>
+        </tr>
+        {% for key,value in fur_color.items %}
+        <tr>
+            <th>{{key}}</th>
+            <th>{{value}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+    <table class="table">
+        <tr>
+            <th>Activities</th>
+            <th>Count</th>
+        </tr>
+        {% for key,value in activities.items %}
+        <tr>
+            <th>{{key}}</th>
+            <th>{{value}}</th>
+        </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>

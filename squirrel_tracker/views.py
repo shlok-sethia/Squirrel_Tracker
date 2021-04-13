@@ -59,9 +59,4 @@ def get_stats(request):
     foraging = Squirrel.objects.filter(Foraging=None)
     activities['foraging']=len(running)
 
-    stats = dict()
-    
-    stats['fur_color'] = color_count
-    stats['activities'] = activities
-
-    return render(request, 'squirrel_tracker/stats.html', {'stats': stats})
+    return render(request, 'squirrel_tracker/stats.html', {'fur_color': color_count,'activities': activities})
