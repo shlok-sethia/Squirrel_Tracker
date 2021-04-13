@@ -69,7 +69,15 @@ def get_stats(request):
     alarms['Indifferent'] = len(Squirrel.objects.filter(Indifferent=True))
     alarms['RunsFrom'] = len(Squirrel.objects.filter(RunsFrom=True))
 
+    ages = dict()
+    ages['Empty'] = 0
+    age_groups = Squirrel.objects.values('Age').distinct()
+    for age in age_groups:
+        if age['Age'] == '':
+            ages['Empty'] = len(Squirrel.objects.filter(Age=age['Age']))
+        else:
+            ages[age['Age']] = len(Squirrel.objects.filter(Age=age['Age']))
 
     return render(request, 'squirrel_tracker/stats.html', {
         'fur_color': color_count,'activities': activities,
-        'alarms':alarms})
+        'alarms':alarms, 'ages':ages})

@@ -88,10 +88,25 @@
         <h4>Comparison of Squirrels by Reaction on Seeing Potential Predator</h4>
         <table class="table table-striped">
             <tr>
-                <th>Activities</th>
+                <th>Reaction</th>
                 <th>Count</th>
             </tr>
             {% for key,value in alarms.items %}
+            <tr>
+                <th>{{key}}</th>
+                <th>{{value}}</th>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div>
+        <h4>Distribution of Squirrels by Age</h4>
+        <table class="table table-striped">
+            <tr>
+                <th>Age Group</th>
+                <th>Count</th>
+            </tr>
+            {% for key,value in ages.items %}
             <tr>
                 <th>{{key}}</th>
                 <th>{{value}}</th>
