@@ -10,7 +10,7 @@
         }
 
         h1 { color: #000000;
-            font-size: 75px;
+            font-size: 50px;
             font-weight: bold;
             letter-spacing: -1px;
             line-height: 1;
@@ -19,17 +19,33 @@
 
 
         .header {
-            padding: 15px;
+            padding: 4px;
             text-align: center;
-            background: #1abc9c;
+            background: #ffae42;
             color: white;
             font-size: 30px;
         }
 
+        a:link, a:visited{
+            background-color: white;
+            color: black;
+            border-style: solid;
+            border-color: #ffae42;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active{
+            background-color: #ffae42;
+            color: black;
+        }
+
         .button {
-            background-color: #1abc9c;
+            background-color: #ffae42;
             border: none;
-            color: white;
+            color: black;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -39,7 +55,6 @@
             cursor: pointer;
         }
         div{
-            display: inline-block;
             padding: 5px;
         }
         form{
@@ -52,9 +67,13 @@
 </head>
 <body>
     <header class='header'>
-        <h1>Update Squirrel Data</h1>
-	<img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Squirrel_in_Seurasaari_autumn.JPG" alt="Sightings_Squirrel" width="360" height="245">
+        <h1>Update Squirrel: Looks like we got a wanderer</h1>
     </header>
+    <br>
+    <div align='center'>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Squirrel_in_Seurasaari_autumn.JPG" alt="Update_Squirrel" width="460" height="345" class="rounded">
+    </div>
+    <br>
         <form method="post">{% csrf_token %}
         {{form_data.as_p}}
         <br>
