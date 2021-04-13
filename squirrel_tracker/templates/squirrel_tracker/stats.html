@@ -10,16 +10,16 @@
             margin: 0;
         }
         h1 { color: #000000;
-            font-size: 100px;
+            font-size: 50px;
             font-weight: bold;
             letter-spacing: -1px;
             line-height: 1;
             text-align: center;
         }
         .header {
-            padding:15px;
+            padding:8px;
             text-align: center;
-            background: #1abc9c;
+            background: #ffae42;
             color: white;
             font-size: 30px;
         }
@@ -47,20 +47,32 @@
             background-color: #1abc9c;
             color: white;
         }
+        div{
+            padding: 15px;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
     <header class='header'>
-        <h1>Interesting Squirrel Stats</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Redsquirrel_eating_2012.jpg" width="360" height="245">
-    </header>
+        <h1>Stats: Insightful right?</h1>
+        </header>
+    <br>
+    <div align='center'>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Redsquirrel_eating_2012.jpg" alt="Stats_Squirrel" width="360" height="245" class="rounded">
+    </div>
+    <br>
     <div>
-        <h4>Distribution of Squirrels by Fur Color</h4>
-        <table class="table table-striped">
+        <div class="alert alert-success text-center" style="width: 700px" role="alert">
+            <h5><strong>Distribution of Squirrels by Fur Color</strong></h5>
+        </div>
+        <table class="table table-striped" style="width: 700px">
+            <thead class="thead-dark">
             <tr>
                 <th>Primary Fur Color</th>
                 <th>Count</th>
             </tr>
+            </thead>
             {% for key,value in fur_color.items %}
             <tr>
                 <th>{{key}}</th>
@@ -68,14 +80,19 @@
             </tr>
             {% endfor %}
         </table>
+        <br>
     </div>
     <div>
-        <h4>Count of Squirrels for Different Activities</h4>
-        <table class="table table-striped">
+        <div class="alert alert-primary text-center" style="width: 700px" role="alert">
+            <h5><strong>Count of Squirrels for Different Activities</strong></h5>
+        </div>
+        <table class="table table-striped"  style="width: 700px">
+            <thead class="thead-dark">
             <tr>
                 <th>Activities</th>
                 <th>Count</th>
             </tr>
+            </thead>
             {% for key,value in activities.items %}
             <tr>
                 <th>{{key}}</th>
@@ -83,14 +100,19 @@
             </tr>
             {% endfor %}
         </table>
+        <br>
     </div>
     <div>
-        <h4>Comparison of Squirrels by Reaction on Seeing Potential Predator</h4>
-        <table class="table table-striped">
+        <div class="alert alert-success text-center" style="width: 700px" role="alert">
+            <h5><strong>Comparison of Squirrels by Reaction on Seeing Potential Predator</strong></h5>
+        </div>
+        <table class="table table-striped" style="width: 700px">
+            <thead class="thead-dark">
             <tr>
                 <th>Reaction</th>
                 <th>Count</th>
             </tr>
+            </thead>
             {% for key,value in alarms.items %}
             <tr>
                 <th>{{key}}</th>
@@ -98,14 +120,19 @@
             </tr>
             {% endfor %}
         </table>
+        <br>
     </div>
     <div>
-        <h4>Distribution of Squirrels by Age</h4>
-        <table class="table table-striped">
+        <div class="alert alert-primary text-center" style="width: 700px" role="alert">
+            <h5><strong>Distribution of Squirrels by Age</strong></h5>
+        </div>
+        <table class="table table-striped" style="width: 700px">
+            <thead class="thead-dark">
             <tr>
                 <th>Age Group</th>
                 <th>Count</th>
             </tr>
+            </thead>
             {% for key,value in ages.items %}
             <tr>
                 <th>{{key}}</th>
@@ -113,6 +140,7 @@
             </tr>
             {% endfor %}
         </table>
+        <br>
     </div>
 </body>
 </html>
