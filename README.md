@@ -15,6 +15,11 @@ He would like to start keeping track of all the known squirrels and plans to sta
 Dataset used to visualize sightings was from the source,[**2018 Central Park Squirrel Census**](https://data.cityofnewyork.us/api/views/vfnx-vebw/rows.csv)
 This data set contains ....
 
+## Dependencies
+- [Python 3.6+](https://www.python.org/)
+- [Django==3.1.7](https://www.djangoproject.com)
+- [Django-Leaflet](https://django-leaflet.readthedocs.io/en/latest/)
+
 ## Management Commands
 Import: A command that can be used to import the data from the 2018 census file (in CSV format). The file path should be specified at the command line after the name of the management command.
 
@@ -27,9 +32,18 @@ Export: A command that can be used to export the data in CSV format. The file pa
 ```sh
 python manage.py export_squirrel_data squirrel_csv.csv
 ```
-## Dependencies
-- [Django](https://www.djangoproject.com)
-- [Django-Leaflet](https://django-leaflet.readthedocs.io/en/latest/)
 
+## Contributors
+### Project Group 27
 
+UNIs: [ss6119,am5618]
 
+Shlok Sethia - **ss6119**
+
+Aashi Malhotra - **az2592**
+
+[**Visit**](https://github.com/shloksethia-6119/project) to our Squirrel Tracker Web-based visual application page for more information.
+
+## Documentation
+The official description for this project is in 
+[**Squirrel Tracker**](https://docs.google.com/document/d/1SPv3fMDKiemrR86rD-S9ecvI2npz3PljDzwCfxK2x5g/edit)
