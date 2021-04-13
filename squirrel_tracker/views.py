@@ -7,7 +7,7 @@ from squirrel_tracker.forms import AddSquirrelForm
 def index(request):
     return render(request, 'squirrel_tracker/index.html',{})
 
-def map(request):
+def map_squirrels(request):
     squirrel_data = Squirrel.objects.all()[:100]
     return render(request, 'squirrel_tracker/map.html', {'squ': squirrel_data})
 
