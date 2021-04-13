@@ -4,32 +4,23 @@
     <meta charset="UTF-8">
     <title>Update</title>
     <style>
-    body {
+        body {
             font-family: 'Helvetica Neue', sans-serif;
             margin: 0;
         }
 
         h1 { color: #000000;
-            font-size: 75px;
+            font-size: 50px;
             font-weight: bold;
             letter-spacing: -1px;
             line-height: 1;
             text-align: center;
         }
 
-
-        .header {
-            padding: 15px;
-            text-align: center;
-            background: #1abc9c;
-            color: white;
-            font-size: 30px;
-        }
-
         .button {
-            background-color: #1abc9c;
+            background-color: #ffae42;
             border: none;
-            color: white;
+            color: black;
             padding: 15px 32px;
             text-align: center;
             text-decoration: none;
@@ -38,10 +29,32 @@
             margin: 4px 2px;
             cursor: pointer;
         }
-        div{
-            display: inline-block;
-            padding: 5px;
+
+        .header {
+            padding:4px;
+            text-align: center;
+            background: #ffae42;
+            color: white;
+            font-size: 30px;
         }
+
+        a:link, a:visited{
+            background-color: white;
+            color: black;
+            border-style: solid;
+            border-color: #ffae42;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active{
+            background-color: #ffae42;
+            color: black;
+        }
+
+
         form{
             display:grid;
         }
@@ -54,10 +67,17 @@
     </style>
 </head>
 <body>
+
     <header class='header'>
-        <h1>Add Squirrel</h1>
-	<img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Streifenhoernchen.jpg" alt="Sightings_Squirrel" width="245" height="245">
-    </header>
+        <h1>Add Squirrel: Aha! We got one more</h1>
+        </header>
+    <br>
+    <div align='center'>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Urocitellus_columbianus_2_%28Glacier_NP%2C_2009%29.jpg" alt="Add_Squirrel" width="460" height="345" class="rounded">
+    </div>
+    <br>
+    <p><strong>Please share the following information to help us track it! :)</strong></p>
+    <br>
         <form method="post">{% csrf_token %}
         {{form_data.as_p}}
         <br>
