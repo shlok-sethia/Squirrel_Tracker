@@ -5,23 +5,62 @@
     <style>
         h5,a{
             padding-left:10px;
+            color: black
+        }
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+        }
+        h1 { color: #000000;
+            font-size: 100px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            line-height: 1;
+            text-align: center;
+        }
+        .header {
+            padding:15px;
+            text-align: center;
+            background: #1abc9c;
+            color: white;
+            font-size: 30px;
+        }
+
+        a:link, a:visited {
+            background-color: white;
+            color: black;
+            border: 2px solid green;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active {
+            background-color: #1abc9c;
+            color: white;
         }
         div{
             display:flex;
+            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
+    <header class='header'>
+        <h1>Guide for Squirrel Data</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/The_fan_tailed_squirrel_%28cropped%29.jpg" alt="Sightings_Squirrel" width="460" height="345">
+    </header>
     <div>
-        <h5>You can see all the Squirrel sightings at :</h5>
+        <h5>You can see all the Squirrel sightings at :  </h5>
         <a href="sightings/sightings">Sightings</a>
     </div>
     <div>
-        <h5>You can add new Squirrel sightings at :</h5>
+        <h5>You can add new Squirrel sightings at :  </h5>
         <a href="sightings/add">Add</a>
     </div>
     <div>
-        <h5>You can see all the Squirrel stats at :</h5>
+        <h5>You can see all the Squirrel stats at :  </h5>
         <a href="sightings/stats">Stats</a>
     </div>
 </body>
