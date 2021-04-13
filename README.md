@@ -54,11 +54,11 @@ python manage.py export_squirrel_data squirrel_csv.csv
 ## Contributors
 ### Project Group 27
 
-UNIs: [ss6119,am5618]
+UNIs: [ss6119, am5618]
 
 Shlok Sethia - **ss6119**
 
-Aashi Malhotra - **az2592**
+Aashi Malhotra - **am5618**
 
 [**Visit**](https://github.com/shloksethia-6119/project) our Squirrel Tracker Web-based visual application page for more information.
 
