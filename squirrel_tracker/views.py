@@ -46,4 +46,17 @@ def get_stats(request):
         else:
             color_count[color['PrimaryFurColor']]=len(Squirrel.objects.filter(PrimaryFurColor=color['PrimaryFurColor']))
     print(color_count)
+
+    age_count = dict()
+    age_count['Empty'] = 0
+    running = Squirrel.objects.filter(Running=None)
+    print(len(running))
+    chasing = Squirrel.objects.filter(Chasing=None)
+    print(len(chasing))
+    climbing = Squirrel.objects.filter(Climbing=None)
+    print(len(climbing))
+    eating = Squirrel.objects.filter(Eating=None)
+    print(len(eating))
+    foraging = Squirrel.objects.filter(Foraging=None)
+    print(len(foraging))
     return render(request, 'squirrel_tracker/stats.html', {})
