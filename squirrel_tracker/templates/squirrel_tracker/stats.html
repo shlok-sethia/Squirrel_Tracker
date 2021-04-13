@@ -23,9 +23,6 @@
             color: white;
             font-size: 30px;
         }
-        div{
-            display:flex;
-        }
         table{
             width:auto;
         }
@@ -58,7 +55,8 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/Redsquirrel_eating_2012.jpg" width="360" height="245">
     </header>
     <div>
-        <table class="table">
+        <h4>Distribution of Squirrels by Fur Color</h4>
+        <table class="table table-striped">
             <tr>
                 <th>Primary Fur Color</th>
                 <th>Count</th>
@@ -70,10 +68,10 @@
             </tr>
             {% endfor %}
         </table>
-        <p>Distribution of Squirrels by Fur Color</p>
     </div>
     <div>
-        <table class="table">
+        <h4>Count of Squirrels for Different Activities</h4>
+        <table class="table table-striped">
             <tr>
                 <th>Activities</th>
                 <th>Count</th>
@@ -85,7 +83,21 @@
             </tr>
             {% endfor %}
         </table>
-        <p>Count of Squirrels for Different Activities</p>
+    </div>
+    <div>
+        <h4>Comparison of Squirrels by Reaction on Seeing Potential Predator</h4>
+        <table class="table table-striped">
+            <tr>
+                <th>Activities</th>
+                <th>Count</th>
+            </tr>
+            {% for key,value in alarms.items %}
+            <tr>
+                <th>{{key}}</th>
+                <th>{{value}}</th>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 </body>
 </html>

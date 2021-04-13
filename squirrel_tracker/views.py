@@ -59,4 +59,17 @@ def get_stats(request):
     foraging = Squirrel.objects.filter(Foraging=True)
     activities['foraging']=len(foraging)
 
-    return render(request, 'squirrel_tracker/stats.html', {'fur_color': color_count,'activities': activities})
+    alarms = dict()
+    alarms['Kuks'] = len(Squirrel.objects.filter(Kuks=True))
+    alarms['Quaas'] = len(Squirrel.objects.filter(Quaas=True))
+    alarms['Moans'] = len(Squirrel.objects.filter(Moans=True))
+    alarms['TailFlags'] = len(Squirrel.objects.filter(TailFlags=True))
+    alarms['TailTwitches'] = len(Squirrel.objects.filter(TailTwitches=True))
+    alarms['Approaches'] = len(Squirrel.objects.filter(Approaches=True))
+    alarms['Indifferent'] = len(Squirrel.objects.filter(Indifferent=True))
+    alarms['RunsFrom'] = len(Squirrel.objects.filter(RunsFrom=True))
+
+
+    return render(request, 'squirrel_tracker/stats.html', {
+        'fur_color': color_count,'activities': activities,
+        'alarms':alarms})
