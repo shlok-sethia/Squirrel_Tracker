@@ -33,6 +33,24 @@ Export: A command that can be used to export the data in CSV format. The file pa
 python manage.py export_squirrel_data squirrel_csv.csv
 ```
 
+## API
+
+### Map View    
+[Map View](https://my-project1-254718.appspot.com/map/)   
+
+### Sightings 
+[Sightings](https://my-project1-254718.appspot.com/sightings/)
+
+### Stats of squirrels
+[Stats of squirrels](https://my-project1-254718.appspot.com/sightings/stats)
+
+### Add squirrels
+[Add squirrels](https://my-project1-254718.appspot.com/sightings/add/)
+
+### Edit a specific squirrel
+[Edit a specific squirrel](https://my-project1-254718.appspot.com/sightings/37F-PM-1014-03/)
+
+
 ## Contributors
 ### Project Group 27
 
@@ -42,7 +60,7 @@ Shlok Sethia - **ss6119**
 
 Aashi Malhotra - **az2592**
 
-[**Visit**](https://github.com/shloksethia-6119/project) to our Squirrel Tracker Web-based visual application page for more information.
+[**Visit**](https://github.com/shloksethia-6119/project) our Squirrel Tracker Web-based visual application page for more information.
 
 ## Documentation
 The official description for this project is in 
