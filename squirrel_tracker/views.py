@@ -38,11 +38,10 @@ def add_sighting(request):
 
 def get_stats(request):
     color_count = dict()
-    color_count['Empty']=0
     primary_fur_colors = Squirrel.objects.values('PrimaryFurColor').distinct()
     for color in primary_fur_colors:
         if color['PrimaryFurColor'] == '' or color['PrimaryFurColor'] is None:
-            color_count['Empty'] += len(Squirrel.objects.filter(PrimaryFurColor=color['PrimaryFurColor']))
+            continue
         else:
             color_count[color['PrimaryFurColor']]=len(Squirrel.objects.filter(PrimaryFurColor=color['PrimaryFurColor']))
     print(color_count)
@@ -70,11 +69,10 @@ def get_stats(request):
     alarms['RunsFrom'] = len(Squirrel.objects.filter(RunsFrom=True))
 
     ages = dict()
-    ages['Empty'] = 0
     age_groups = Squirrel.objects.values('Age').distinct()
     for age in age_groups:
-        if age['Age'] == '':
-            ages['Empty'] = len(Squirrel.objects.filter(Age=age['Age']))
+        if age['Age'] == '' or age['Age']=='?':
+            continue
         else:
             ages[age['Age']] = len(Squirrel.objects.filter(Age=age['Age']))
 

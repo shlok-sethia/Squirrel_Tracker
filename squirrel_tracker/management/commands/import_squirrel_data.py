@@ -31,7 +31,6 @@ class Command(BaseCommand):
                 csv_reader = csv.reader(csv_file, delimiter=',')
                 #self.clear_model()
                 for row in csv_reader:
-                    print(type(row[15]))
                     if row != '' and line_count >= 1 and row[2] not in squirrel_id:
                         m, d, y = pattern.match(row[5]).groups()
                         squirrel = Squirrel.objects.create(
