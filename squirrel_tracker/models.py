@@ -35,4 +35,4 @@ class Squirrel(models.Model):
     LatLong = models.CharField('Latlong', max_length=255, null=True, blank=True)
 
     def __str__(self):
-        return f'Suirrel ID: {self.UniqueSquirrelID}'
+        return f'Squirrel ID: {self.UniqueSquirrelID}'
