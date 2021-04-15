@@ -106,11 +106,13 @@
             <tr>
                 <th>UniqueSquirrelID</th>
                 <th>Date</th>
+		<th>View Full Details</th>
             </tr>
             {% for rows in squ %}
             <tr>
                 <td><a href="{{rows.UniqueSquirrelID}}" class="rounded" role="button" aria-pressed="true">{{rows.UniqueSquirrelID}}</a></td>
                 <td>{{rows.Date}}</td>
+		<td><a href="squirrel_details/{{rows.UniqueSquirrelID}}" class="rounded" role="button" aria-pressed="true">Details</a></td>
             </tr>
             {% endfor %}
         </table>
