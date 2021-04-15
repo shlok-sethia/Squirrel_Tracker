@@ -12,7 +12,7 @@ def map_squirrels(request):
     return render(request, 'squirrel_tracker/map.html', {'squ': squirrel_data})
 
 def sightings(request):
-    squirrel_data = Squirrel.objects.all()[:100]
+    squirrel_data = Squirrel.objects.all()
     return render(request, 'squirrel_tracker/sightings.html', {'squ': squirrel_data})
 
 def update_squirrel(request, squirrel_id):
