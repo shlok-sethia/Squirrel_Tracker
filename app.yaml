@@ -15,5 +15,5 @@ env_variables:
     PGUSER: 'postgres'
     PGPASSWORD: 'Nl0wnHgerp6gqDG5'
     SECRET_KEY: '+53dcxfaq-3pv2n*sikhyhywxr!o1p49inrh*t-r!g3asp1shj'
-    GS_BUCKET_NAME: 'hybrid-creek-308805.el.r.appspot.com'  # eg. 'ieor-tools-for-analytics.appspot.com'
+    GS_BUCKET_NAME: 'hybrid-creek-308805.appspot.com'  # eg. 'ieor-tools-for-analytics.appspot.com'
     GOOGLE_APPLICATION_CREDENTIALS: 'service-account-key.json'  # eg. 'service-account-key.json'
