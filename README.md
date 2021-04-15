@@ -50,6 +50,8 @@ python manage.py export_squirrel_data squirrel_csv.csv
 ### Edit a specific squirrel
 [Edit a specific squirrel](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/37F-PM-1014-03)
 
+### View All details of a Squirrel
+[View details of a Squirrel](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/squirrel_details/37F-PM-1014-03)
 
 ## Contributors
 ### Project Group 27
