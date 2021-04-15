@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+    <style>
+    body {
+            font-family: 'Helvetica Neue', sans-serif;
+            margin: 0;
+        }
+
+        h1 { color: #000000;
+            font-size: 50px;
+            font-weight: bold;
+            letter-spacing: -1px;
+            line-height: 1;
+            text-align: center;
+        }
+
+
+        .header {
+            padding: 4px;
+            text-align: center;
+            background: #ffae42;
+            color: white;
+            font-size: 30px;
+        }
+
+        a:link, a:visited{
+            background-color: white;
+            color: black;
+            border-style: solid;
+            border-color: #ffae42;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        a:hover, a:active{
+            background-color: #ffae42;
+            color: black;
+        }
+
+        .button {
+            background-color: #ffae42;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        div{
+            padding: 5px;
+        }
+        form{
+            display:grid;
+        }
+        .submit{
+            width: fit-content;
+        }
+        p{
+            margin-left:20px;
+        }
+    </style>
+</head>
+<body>
+    <header class='header'>
+        <h1>View Squirrel: Interested in all Features?</h1>
+    </header>
+    <br>
+    <div align='center'>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Squirrel_posing.jpg" alt="View_Squirrel" width="400" height="345" class="rounded">
+    </div>
+    <br>
+        <form method="get">{% csrf_token %}
+        {{form_data.as_p}}
+        <br>
+    </form>
+</body>
+</html>

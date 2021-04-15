@@ -10,3 +10,4 @@ class AddSquirrelForm(ModelForm):
 	class Meta:
 		model = Squirrel
 		fields = '__all__'
+

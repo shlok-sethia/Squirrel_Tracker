@@ -8,5 +8,6 @@ urlpatterns = [
     path('sightings/', views.sightings, name='sightings'),
     re_path('sightings/([\w]*-[\w]*-[\w]*-[\w]*)', views.update_squirrel, name='update'),
     path('sightings/add', views.add_sighting, name='add'),
-    path('sightings/stats', views.get_stats, name='stats')
+    path('sightings/stats', views.get_stats, name='stats'),
+    re_path('sightings/squirrel_details/([\w]*-[\w]*-[\w]*-[\w]*)', views.all_details, name='details')
 ]
