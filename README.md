@@ -13,7 +13,7 @@ He would like to start keeping track of all the known squirrels and plans to sta
 
 ## DataSet
 Dataset used to visualize sightings was from the source,[**2018 Central Park Squirrel Census**](https://data.cityofnewyork.us/api/views/vfnx-vebw/rows.csv)
-This data set contains ....
+This data set contains features like location, Age, color, Activities etc.
 
 ## Dependencies
 - [Python 3.6+](https://www.python.org/)
