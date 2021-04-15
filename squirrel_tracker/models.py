@@ -1,6 +1,6 @@
 from django.db import models
-from django.utils.translation import gettext as _
-# Create your models here.
+
+
 class Squirrel(models.Model):
     Latitude = models.FloatField('X', blank=False)
     Longitude = models.FloatField('Y', blank=False)

@@ -5,7 +5,7 @@ from squirrel_tracker.forms import AddSquirrelForm
 
 
 def index(request):
-    return render(request, 'squirrel_tracker/index.html',{})
+    return render(request, 'squirrel_tracker/index.html', {})
 
 
 def map_squirrels(request):
@@ -21,7 +21,6 @@ def sightings(request):
 def update_squirrel(request, squirrel_id):
     squirrel_data = Squirrel.objects.get(UniqueSquirrelID=squirrel_id)
     if request.method == 'POST':
-        print('yes')
         form_data = SquirrelForm(request.POST, instance=squirrel_data)
         if form_data.is_valid():
             form_data.save()
@@ -42,7 +41,6 @@ def add_sighting(request):
 
 
 def all_details(request, squirrel_id):
-    print('yes')
     squirrel_data = Squirrel.objects.get(UniqueSquirrelID=squirrel_id)
     form_data = AddSquirrelForm(instance=squirrel_data)
     return render(request, 'squirrel_tracker/squirrel_details.html', {'form_data': form_data})
@@ -55,20 +53,20 @@ def get_stats(request):
         if color['PrimaryFurColor'] == '' or color['PrimaryFurColor'] is None:
             continue
         else:
-            color_count[color['PrimaryFurColor']]=len(Squirrel.objects.filter(PrimaryFurColor=color['PrimaryFurColor']))
+            color_count[color['PrimaryFurColor']] = len(Squirrel.objects.filter(PrimaryFurColor=color['PrimaryFurColor']))
     print(color_count)
 
     activities = dict()
     running = Squirrel.objects.filter(Running=True)
-    activities['running']=len(running)
+    activities['running'] = len(running)
     chasing = Squirrel.objects.filter(Chasing=True)
-    activities['chasing']=len(chasing)
+    activities['chasing'] = len(chasing)
     climbing = Squirrel.objects.filter(Climbing=True)
-    activities['climbing']=len(climbing)
+    activities['climbing'] = len(climbing)
     eating = Squirrel.objects.filter(Eating=True)
-    activities['eating']=len(eating)
+    activities['eating'] = len(eating)
     foraging = Squirrel.objects.filter(Foraging=True)
-    activities['foraging']=len(foraging)
+    activities['foraging'] = len(foraging)
 
     alarms = dict()
     alarms['Kuks'] = len(Squirrel.objects.filter(Kuks=True))
@@ -83,11 +81,11 @@ def get_stats(request):
     ages = dict()
     age_groups = Squirrel.objects.values('Age').distinct()
     for age in age_groups:
-        if age['Age'] == '' or age['Age']=='?':
+        if age['Age'] == '' or age['Age'] == '?':
             continue
         else:
             ages[age['Age']] = len(Squirrel.objects.filter(Age=age['Age']))
 
     return render(request, 'squirrel_tracker/stats.html', {
-        'fur_color': color_count,'activities': activities,
-        'alarms':alarms, 'ages':ages})
+        'fur_color': color_count, 'activities': activities,
+        'alarms':alarms, 'ages': ages})

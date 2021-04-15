@@ -17,7 +17,7 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         filename = kwargs['filename']
         columns = Squirrel._meta.fields
-        with open(filename, 'w') as f:
+        with open(filename, 'w+') as f:
             writer = csv.writer(f)
             for i in Squirrel.objects.all():
                 row = [getattr(i, col.name) for col in columns]
