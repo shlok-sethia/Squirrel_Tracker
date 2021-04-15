@@ -24,7 +24,7 @@ This data set contains ....
 Import: A command that can be used to import the data from the 2018 census file (in CSV format). The file path should be specified at the command line after the name of the management command.
 
 ```sh
-python manage.py import_squirrel_data squirrel.csv
+python manage.py import_squirrel_data squirrel_data.csv
 ```
 
 Export: A command that can be used to export the data in CSV format. The file path should be specified at the command line after the name of the management command. 
