@@ -36,19 +36,19 @@ python manage.py export_squirrel_data squirrel_csv.csv
 ## API
 
 ### Map View    
-[Map View](https://my-project1-254718.appspot.com/map/)   
+[Map View](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/map/)   
 
 ### Sightings 
-[Sightings](https://my-project1-254718.appspot.com/sightings/)
+[Sightings](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/)
 
 ### Stats of squirrels
-[Stats of squirrels](https://my-project1-254718.appspot.com/sightings/stats)
+[Stats of squirrels](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/stats)
 
 ### Add squirrels
-[Add squirrels](https://my-project1-254718.appspot.com/sightings/add/)
+[Add squirrels](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/add)
 
 ### Edit a specific squirrel
-[Edit a specific squirrel](https://my-project1-254718.appspot.com/sightings/37F-PM-1014-03/)
+[Edit a specific squirrel](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/37F-PM-1014-03)
 
 
 ## Contributors
