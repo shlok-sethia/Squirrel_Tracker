@@ -1,8 +1,19 @@
 runtime: python37
 
 handlers:
-        - url: /static
-          static_dir: static
+    # This configures Google App Engine to serve the files in the app's
+    # static directory.
+     - url: /static
+       static_dir: static
 
-        - url: /.*
-          script: auto
+     - url: /.*
+       script: auto
+
+env_variables:
+    INSTANCE_CONNECTION_NAME: 'hybrid-creek-308805:us-central1:squirrel'  # eg. 'ieor-tools-for-analytics:asia-east1:adopt'
+    PGDATABASE: 'postgres'
+    PGUSER: 'postgres'
+    PGPASSWORD: 'Nl0wnHgerp6gqDG5'
+    SECRET_KEY: '+53dcxfaq-3pv2n*sikhyhywxr!o1p49inrh*t-r!g3asp1shj'
+    GS_BUCKET_NAME: 'hybrid-creek-308805.el.r.appspot.com'  # eg. 'ieor-tools-for-analytics.appspot.com'
+    GOOGLE_APPLICATION_CREDENTIALS: 'service-account-key.json'  # eg. 'service-account-key.json'
