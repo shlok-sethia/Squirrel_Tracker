@@ -56,6 +56,7 @@ python manage.py export_squirrel_data squirrel_csv.csv
 ## Contributors
 
 Shlok Sethia 
+
 Aashi Malhotra
 
 [**Visit**](https://github.com/shloksethia-6119/project) our Squirrel Tracker Web-based visual application page for more information.
