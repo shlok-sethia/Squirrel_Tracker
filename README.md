@@ -54,13 +54,9 @@ python manage.py export_squirrel_data squirrel_csv.csv
 [View details of a Squirrel](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/squirrel_details/37F-PM-1014-03)
 
 ## Contributors
-### Project Group 27
 
-UNIs: [ss6119, am5618]
-
-Shlok Sethia - **ss6119**
-
-Aashi Malhotra - **am5618**
+Shlok Sethia 
+Aashi Malhotra
 
 [**Visit**](https://github.com/shloksethia-6119/project) our Squirrel Tracker Web-based visual application page for more information.
 
