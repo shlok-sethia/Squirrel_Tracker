@@ -1,6 +1,7 @@
 # Squirrel Tracker: Web-based visual application
 
-## Introduction
+## Introduction 
+
 
 Django, a Python-based free and open-source web framework that follows the model-template-views architectural pattern, is used to construct a Web-based visual application **Squirrel Tracker** 
 
