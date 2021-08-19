@@ -37,22 +37,22 @@ python manage.py export_squirrel_data squirrel_csv.csv
 ## API
 
 ### Map View    
-[Map View](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/map/)   
+<p align="center"><img src="./readme_assets/miami_map.png"></p>
 
 ### Sightings 
-[Sightings](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/)
+<p align="center"><img src="./readme_assets/miami_map.png"></p>
 
 ### Stats of squirrels
-[Stats of squirrels](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/stats)
+<p align="center"><img src="./readme_assets/miami_map.png"></p>
 
 ### Add squirrels
-[Add squirrels](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/add)
+<p align="center"><img src="./readme_assets/miami_map.png"></p>
 
 ### Edit a specific squirrel
-[Edit a specific squirrel](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/37F-PM-1014-03)
+<p align="center"><img src="./readme_assets/miami_map.png"></p>
 
 ### View All details of a Squirrel
-[View details of a Squirrel](https://hybrid-creek-308805.el.r.appspot.com/squirrel_tracker/sightings/squirrel_details/37F-PM-1014-03)
+<p align="center"><img src="./readme_assets/miami_map.png"></p>
 
 ## Contributors
 
