@@ -37,13 +37,13 @@ python manage.py export_squirrel_data squirrel_csv.csv
 ## API
 
 ### Map View    
-<p align="center"><img src="./readme_assets/miami_map.png"></p>
+<p align="center"><img src="./readme_assets/sightings.png"></p>
 
 ### Sightings 
-<p align="center"><img src="./readme_assets/miami_map.png"></p>
+<p align="center"><img src="./readme_assets/view.png"></p>
 
 ### Stats of squirrels
-<p align="center"><img src="./readme_assets/miami_map.png"></p>
+<p align="center"><img src="./readme_assets/stats.png"></p>
 
 ### Add squirrels
 <p align="center"><img src="./readme_assets/miami_map.png"></p>
