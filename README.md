@@ -46,13 +46,13 @@ python manage.py export_squirrel_data squirrel_csv.csv
 <p align="center"><img src="./readme_assets/stats.png"></p>
 
 ### Add squirrels
-<p align="center"><img src="./readme_assets/miami_map.png"></p>
+<p align="center"><img src="./readme_assets/add.png"></p>
 
 ### Edit a specific squirrel
-<p align="center"><img src="./readme_assets/miami_map.png"></p>
+<p align="center"><img src="./readme_assets/update.png"></p>
 
 ### View All details of a Squirrel
-<p align="center"><img src="./readme_assets/miami_map.png"></p>
+<p align="center"><img src="./readme_assets/full.png"></p>
 
 ## Contributors
 
